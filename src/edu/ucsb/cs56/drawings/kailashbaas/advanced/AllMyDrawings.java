@@ -10,7 +10,9 @@ import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 /**
- * A class with static methods for drawing various pictures
+ * A class with static methods for drawing either a basic
+ * sports field, a basketball court, or a few houses and
+ * cups (left over from code by Phill Conrad
  * 
  * @author Kailash Baas
  * @version for UCSB CS56, F17 

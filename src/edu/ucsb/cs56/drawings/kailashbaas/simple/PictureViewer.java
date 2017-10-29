@@ -7,7 +7,7 @@ import javax.swing.JFrame;
  *  
  * @author P. Conrad
  * @author Kailash Baas
- * @version CS56, W16, UCSB
+ * @version CS56, F17, UCSB
  */
 
 public class PictureViewer
