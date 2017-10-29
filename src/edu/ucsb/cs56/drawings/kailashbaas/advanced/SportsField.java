@@ -19,6 +19,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
    court is on the left or right side of the court.
 
    @author Kailash Baas
+   @version for UCSB CS56, F17
 */
 public class SportsField extends GeneralPathWrapper implements Shape
 {
@@ -35,13 +36,13 @@ public class SportsField extends GeneralPathWrapper implements Shape
         // Beacuse of how the field is drawn, the width of the field
         // acts as the height of the rectangle representing the field
 
-        double circleDiameter = 6 * y / 25;
-        double circleX = 41 * (x + length) / 94;
-        double circleY = 19 * (y + width) / 50;
+        double circleDiameter = 6 * width / 25;
+        double circleX = x + ((length - circleDiameter) / 2);
+        double circleY = y + ((width - circleDiameter) / 2);
 
         Rectangle2D.Double field = new Rectangle2D.Double(x, y, length, width);
         Ellipse2D.Double halfCourtCircle = new Ellipse2D.Double(circleX, circleY, circleDiameter, circleDiameter);
-        Line2D.Double halfCourtLine = new Line2D.Double(x + (length / 2), x + (length / 2), y, y + width);
+        Line2D.Double halfCourtLine = new Line2D.Double(x + (length / 2), x, y + (length / 2), y + width);
 
         GeneralPath completeField = this.get();
         completeField.append(field, false);

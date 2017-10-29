@@ -5,10 +5,10 @@ import java.awt.Graphics2D;
 import javax.swing.JComponent;
 
 /**
-   A component that draws a Picture by Phill Conrad
+   A component that draws a Picture by Kailash Baas
    
-   @author Phill Conrad (original drawing)
-   @version CS56, W16, UCSB
+   @author Kailash Baas
+   @version CS56, F17, UCSB
 */
 
 
@@ -42,9 +42,6 @@ public class MultiPictureComponent extends JComponent
 	case 3:
 	    AllMyDrawings.drawPicture3(g2);
 	    break;
-    case 4:
-        AllMyDrawings.drawPicture4(g2);
-        break;
 	default:
 	    throw new IllegalArgumentException("Unknown value for whichPicture in MultiPictureComponent" + this.whichPicture);
 	} // switch

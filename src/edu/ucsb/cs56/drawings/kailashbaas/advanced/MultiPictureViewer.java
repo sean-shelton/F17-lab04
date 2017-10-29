@@ -2,9 +2,9 @@ package edu.ucsb.cs56.drawings.kailashbaas.advanced;
 
 import javax.swing.JFrame;
 
-/** A viewer class to see a picture I drew with 
- *  just three simple Java graphics objects, namely
- *  Rectangle, Line2D.Double, Ellipse2D.Double
+/** A viewer class to see a either a drawing of a
+ *  basic sports field, a basketball court, or the
+ *  third image drawn by Professor Conrad
  *  
  * @author P. Conrad 
  * @version for UCSB CS56, W16
@@ -28,7 +28,7 @@ public class MultiPictureViewer
        // Set the size to whatever size you like (width, height)
        // For projects you turn in, lets not get any bigger than 640,480
        
-       frame.setSize(640,480); // @@@ MODIFY THIS LINE IF YOU LIKE
+       frame.setSize(840,680); // @@@ MODIFY THIS LINE IF YOU LIKE
        
        // Set your own title
        frame.setTitle("Kailash's First Drawing"); // @@@ MODIFY THIS LINE
