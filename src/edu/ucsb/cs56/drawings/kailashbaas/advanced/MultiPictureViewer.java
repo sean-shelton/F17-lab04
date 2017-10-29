@@ -7,7 +7,7 @@ import javax.swing.JFrame;
  *  third image drawn by Professor Conrad
  *  
  * @author P. Conrad 
- * @version for UCSB CS56, W16
+ * @version for CS56, F17, UCSB
  */
 
 public class MultiPictureViewer

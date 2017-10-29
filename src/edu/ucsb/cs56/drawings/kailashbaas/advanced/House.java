@@ -14,7 +14,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
    rotated, scaled, etc.
       
    @author Phill Conrad 
-   @version for CS56, W16, UCSB
+   @version for CS56, F17, UCSB
    
 */
 public class House extends GeneralPathWrapper implements Shape

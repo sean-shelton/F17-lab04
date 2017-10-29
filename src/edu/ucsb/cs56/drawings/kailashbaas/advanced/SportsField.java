@@ -19,7 +19,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
    court is on the left or right side of the court.
 
    @author Kailash Baas
-   @version for UCSB CS56, F17
+   @version for CS56, F17, UCSB
 */
 public class SportsField extends GeneralPathWrapper implements Shape
 {

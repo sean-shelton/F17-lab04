@@ -7,7 +7,7 @@ import java.awt.geom.Rectangle2D;
    A House
       
    @author Phill Conrad 
-   @version for CS56, W16, UCSB
+   @version for CS56, F17, UCSB
    
 */
 public class HouseWithWindows extends House implements Shape

@@ -5,7 +5,7 @@ package edu.ucsb.cs56.drawings.kailashbaas.simple;
  * because the parameters to the constructor are more convenient
  * 
  * @author P. Conrad 
- * @version CS56, W16, UCSB
+ * @version CS56, F17, UCSB
  */
 
 public class Circle 

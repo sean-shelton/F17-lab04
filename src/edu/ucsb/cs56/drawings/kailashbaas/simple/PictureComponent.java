@@ -14,7 +14,7 @@ import java.awt.geom.Rectangle2D;
    
    @author Phill Conrad (original drawing)
    @author Kailash Baas
-   @version for UCSB CS56, F17
+   @version for CS56, F17, UCSB
 */
 
 // Your class should "extend JComponent

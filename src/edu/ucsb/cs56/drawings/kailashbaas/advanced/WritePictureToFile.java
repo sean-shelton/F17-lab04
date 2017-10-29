@@ -10,7 +10,7 @@ import java.io.IOException;
  *  A class with a main method that can write a drawing to a graphics file.
  *
  *  @author P. Conrad,
- *  @version for CS56, W16, UCSB
+ *  @version for CS56, F17, UCSB
  */
 
 public class WritePictureToFile
