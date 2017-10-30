@@ -60,7 +60,7 @@ public class RubiksCube extends Cube implements Shape
 		Ellipse2D.Double logo1 = new Ellipse2D.Double(logoUpperLeftX, logoUpperLeftY, logoWidth, logoHeight);
 		Rectangle2D.Double logo2 = new Rectangle2D.Double(logoUpperLeftX+0.5, logoUpperLeftY+0.5, logoWidth-1, logoHeight-1);
 	
-		// Add the lines to the cube
+		// Add the lines to the Rubik's Cube
 		GeneralPath wholeRubiksCube = this.get();
 		wholeRubiksCube.append(ll_1, false);
 		wholeRubiksCube.append(ll_2, false);
