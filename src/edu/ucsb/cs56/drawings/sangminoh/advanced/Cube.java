@@ -33,16 +33,16 @@ public class Cube extends GeneralPathWrapper implements Shape
         
         What cube should look like:
         
-        			0
-        	      -   -
-        	   -         -
-        	5				1
-        	|  -		 -	|
-        	|	  - . -		|
-        	4		|		2	
-        	   -    |    - 
-        		  -   -
-        			3
+                    0
+                  -   -
+               -         -
+            5               1
+            |  -         -  |
+            |     -   -     |
+            4       |       2	
+               -    |    - 
+                  -   -
+                    3
         	
         */
         double[] hexOutlineX = new double[6];
