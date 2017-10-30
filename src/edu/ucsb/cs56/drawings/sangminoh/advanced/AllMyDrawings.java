@@ -142,18 +142,16 @@ public class AllMyDrawings
     
     public static void drawPicture3(Graphics2D g2) {
 	
-		// label the drawing
+		// Draw a green cube 
+		RubiksCube rc1 = new RubiksCube(493, 281, 92);
+		g2.setColor(Color.BLUE); 
+		g2.draw(rc1);
+		
+		// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	
-		g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
-	
-	
-		// Draw some coffee cups.
-	
-		CoffeeCup large = new CoffeeCup(100,50,225,150);
-		CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-	
-		g2.setColor(Color.RED);     g2.draw(large);
-		g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	
+		Stroke orig=g2.getStroke();
+		g2.setStroke(orig);
+		g2.setColor(Color.BLACK); 
+		g2.drawString("Robust Rubik's Cubes by Sang Min Oh", 20,20);
     }       
 }
