@@ -13,16 +13,17 @@ import java.awt.geom.Rectangle2D;
 public class RubiksCube extends Cube implements Shape
 {
     /*
-     * Constructor for objects of class CoffeeCup
-     
-    public HouseWithWindows(double x, double y, double width, double height)
+     * Constructor for objects of class RubiksCube
+     */
+    public RubiksCube(double x, double y, double side)
     {
-	// construct the basic house shell
-	super(x,y,width,height);
+	// construct the basic cube shell
+	super(x,y,side);
 	
 	// get the GeneralPath that we are going to append stuff to
 	GeneralPath gp = this.get();
 	
+	/*
 	// Make three windows, spaced like this, where w=width/10.0;
 	// | +--+ +--+ +--+ |
 	// | |  | |  | |  | |
@@ -50,6 +51,6 @@ public class RubiksCube extends Cube implements Shape
         GeneralPath wholeHouse = this.get();
         wholeHouse.append(win1, false);
         wholeHouse.append(win2, false);
-        wholeHouse.append(win3, false); 
-    }    */
+        wholeHouse.append(win3, false); */
+    }    
 }
