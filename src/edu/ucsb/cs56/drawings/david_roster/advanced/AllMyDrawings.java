@@ -90,10 +90,10 @@ public class AllMyDrawings
 	// Draw some SurfBoards
 	
 //	Surfboard LargeSB = new Surfboard(100,175,450,275);
-  //      g2.setColor(Color.GREEN);
+//      g2.setColor(Color.GREEN);
 //	Shape Board2 = ShapeTransforms.scaledCopyOfLL(LargeSB,2,2);
-  //      Board2 = ShapeTransforms.translatedCopyOf(Board2,300,100);
-//        g2.draw(LargeSB);
+//      Board2 = ShapeTransforms.translatedCopyOf(Board2,300,100);
+//      g2.draw(LargeSB);
 	
 
         Surfboard SmallSB = new Surfboard(400,340,175,60);

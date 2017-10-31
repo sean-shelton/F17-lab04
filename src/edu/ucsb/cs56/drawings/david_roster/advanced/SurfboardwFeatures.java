@@ -33,22 +33,22 @@ public class SurfboardwFeatures extends Surfboard implements Shape
 	double leashY = y + width/4;
 	
 	CubicCurve2D leash = new CubicCurve2D.Double();
-	leash.setCurve(leashX, leashY, leashX+15, leashY+20, leashX + 175, leashY + 25, leashX+75, leashY+ 180);
+		leash.setCurve(leashX, leashY, leashX+15, leashY+20, leashX + 					175, leashY + 25, leashX+75, leashY+ 180);
 
 	double RectLeashX = leashX + 75;
 	double RectLeashY = leashY + 180;
 
-	Rectangle2D.Double RectLeash =
-	    new Rectangle2D.Double(RectLeashX, RectLeashY,15,15);
+		Rectangle2D.Double RectLeash =
+	    		new Rectangle2D.Double(RectLeashX, RectLeashY,15,15);
 
-	Ellipse2D.Double PolkaDot1 =
-            new Ellipse2D.Double(x+ x/8, y+ y/8, 15, 15);
-        Ellipse2D.Double PolkaDot2 =
-            new Ellipse2D.Double(x+ x/8 + x/8, y+ y/8, 15, 15);
-        Ellipse2D.Double PolkaDot3 =
-            new Ellipse2D.Double(x+ x/8 + x/8 + x/8, y + y/8,  15, 15);
-        Ellipse2D.Double PolkaDot4 =
-            new Ellipse2D.Double(x + x/8 + x/8 + x/8 + x/8, y+ y/8, 15, 15);
+		Ellipse2D.Double PolkaDot1 =
+            		new Ellipse2D.Double(x+ x/8, y+ y/8, 15, 15);
+        	Ellipse2D.Double PolkaDot2 =
+            		new Ellipse2D.Double(x+ x/8 + x/8, y+ y/8, 15, 15);
+        	Ellipse2D.Double PolkaDot3 =
+            		new Ellipse2D.Double(x+ x/8 + x/8 + x/8, y + y/8,  15							, 15);
+        	Ellipse2D.Double PolkaDot4 =
+            		new Ellipse2D.Double(x + x/8 + x/8 + x/8 + x/8, y+ y/							8, 15, 15);
       //  Ellipse2D.Double PolkaDot5 =
         //   new Ellipse2D.Double(x+ x/4, y+ y/9, 15, 15);
 	

@@ -40,26 +40,26 @@ public class Surfboard extends GeneralPathWrapper implements Shape
 //Start of new code
 
 //managing Fins Aspect
-double finwidth = width/5;
-double finlength = height/5;
+	double finwidth = width/5;
+	double finlength = height/5;
 
 
-double YaxisFins = y + height/2;
-//double XaxisFin1 = x + width/3;
-double XaxisFin = x + (2 * width)/3;
-double YaxisFin2 = y + height/4;
+	double YaxisFins = y + height/2;
+	//double XaxisFin1 = x + width/3;
+	double XaxisFin = x + (2 * width)/3;
+	double YaxisFin2 = y + height/4;
 
 
-Ellipse2D.Double board =
-            new Ellipse2D.Double(x, y, width, height);
+		Ellipse2D.Double board =
+            		new Ellipse2D.Double(x, y, width, height);
 
 
-Ellipse2D.Double fin1 =
-            new Ellipse2D.Double(XaxisFin, YaxisFins,
+		Ellipse2D.Double fin1 =
+            		new Ellipse2D.Double(XaxisFin, YaxisFins,
                                    finwidth, finlength);
 
-Ellipse2D.Double fin2 =
-            new Ellipse2D.Double(XaxisFin, YaxisFin2,
+		Ellipse2D.Double fin2 =
+            		new Ellipse2D.Double(XaxisFin, YaxisFin2,
                                    finwidth, finlength);
 
 	

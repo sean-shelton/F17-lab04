@@ -25,7 +25,7 @@ public class SimpleGui1 {
 	
 	//java.awt.Color myColor = new java.awt.Color(204,255,000);   // R, G, B values.
 	//button.setBackground(myColor);
-	java.awt.Color myColor = new java.awt.Color(204,255,153);   // R, G, B values. 
+	java.awt.Color myColor = new java.awt.Color(255,20,20);   // R, G, B values. 
 	button.setBackground(myColor); //button.setOpaque(true);
 	button.setOpaque(true);
 	
