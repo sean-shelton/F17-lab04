@@ -20,10 +20,10 @@ import java.util.ArrayList;
 
 public class AllMyDrawings
 {
-    /* 
+    /**
+    	This function draws several cubes and shows how each cube can scale, translate, and be drawn with different colors/pen thickness. In addition, two of the cubes are randomly generated (center and size). 
+    	
 		@param g2 Graphics2D object
-		
-		This function draws several cubes and shows how each cube can scale, translate, and be drawn with different colors/pen thickness. In addition, two of the cubes are randomly generated (center and size). 
      */
     public static void drawPicture1(Graphics2D g2) {
 	
@@ -67,10 +67,10 @@ public class AllMyDrawings
     }
     
     
-    /* 
+    /**
+   		This function draws both Cube and RubiksCube objects. This function shows that the Cube and RubiksCube objects can be rotated. A lot of Cube and RubiksCube objects of different color, size, rotation, scaling are created.
+    
     	@param g2 Graphics2D object
-		
-		This function draws both Cube and RubiksCube objects. This function shows that the Cube and RubiksCube objects can be rotated. A lot of Cube and RubiksCube objects of different color, size, rotation, scaling are created.
      */
     public static void drawPicture2(Graphics2D g2) {
 	
@@ -118,10 +118,11 @@ public class AllMyDrawings
 		g2.drawString("The Polygon Party by Sang Min Oh", 20,20);
     }
     
-    /*
-    	@param g2 Graphics2D object
-		
+    /**
+    	
 		This function takes the ability of Cube and RubiksCube objects to rotate and be different colors in order to create a picture of a rather blocky flower. The main flower is fixed, but the green plant life around the flower is randomly generated (random location, size, rotation, and shade of green). 
+		
+    	@param g2 Graphics2D object
      */
     public static void drawPicture3(Graphics2D g2) {
 	

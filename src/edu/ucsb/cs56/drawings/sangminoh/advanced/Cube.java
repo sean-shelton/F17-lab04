@@ -18,7 +18,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 */
 public class Cube extends GeneralPathWrapper implements Shape
 {
-    /*
+    /**
        Constructor
        
        @param x x-coordinate of the center of the cube

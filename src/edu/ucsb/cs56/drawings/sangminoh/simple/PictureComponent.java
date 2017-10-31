@@ -47,7 +47,6 @@ public class PictureComponent extends JComponent
         Graphics2D g2 = (Graphics2D) g;
 	
         // Now the fun part---we draw stuff!
-        // @@@ YOU'LL CUSTOMIZE EVERYTHING BELOW THIS LINE
 	
         Rectangle2D.Double house = new Rectangle2D.Double(100, 200, 100, 100);
         g2.draw( house);
@@ -88,14 +87,13 @@ public class PictureComponent extends JComponent
 	     );
         g2.draw(snowManMiddleCircle);
 	
-        // @@@ ADD CODE HERE TO DRAW THE TOP CIRCLE
+        // Draw the snowman's head
 		Circle snowManTopCircle = new Circle(snowManCenterBottomX, snowManCenterBottomY - bottomRadius * 2 - middleRadius * 2 - topRadius, topRadius);
 		g2.draw(snowManTopCircle);
 
 
-        // @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
-		// @@@ 20, 20 are suggested coordinates, but you may change them
-
+       
+		// Label the drawing
         g2.drawString("A VERY White Christmas - Sang Min Oh", 20,20);
 	
     }

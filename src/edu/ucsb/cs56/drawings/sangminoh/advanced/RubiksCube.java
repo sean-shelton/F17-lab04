@@ -18,7 +18,7 @@ import java.util.ArrayList;
 */
 public class RubiksCube extends Cube implements Shape
 {
-    /*
+    /**
      	Constructor
        
        @param x x-coordinate of the center of the RubiksCube
