@@ -7,6 +7,8 @@ import java.awt.geom.Rectangle2D;
 
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
+import java.util.ArrayList;
+
 /**
    A Rubik's Cube
       
@@ -17,7 +19,11 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 public class RubiksCube extends Cube implements Shape
 {
     /*
-     * Constructor for objects of class RubiksCube
+     	Constructor
+       
+       @param x x-coordinate of the center of the RubiksCube
+       @param y y-coordinate of the center of the RubiksCube
+       @param side length of one side of the RubiksCube
      */
     public RubiksCube(double x, double y, double side)
     {
@@ -32,23 +38,27 @@ public class RubiksCube extends Cube implements Shape
 		double deltaX = side*Math.cos(theta)/3;
 		double deltaY = side*Math.sin(theta)/3;
 		
+		// Create an ArrayList of lines
+		ArrayList<Line2D.Double> lines = new ArrayList<Line2D.Double>();
+		
+		
 		// Draw the 4 lines on the lower left face
-		Line2D.Double ll_1 = new Line2D.Double(x-deltaX, y-deltaY, x-deltaX, y+side-deltaY);
-		Line2D.Double ll_2 = new Line2D.Double(x-2*deltaX, y-2*deltaY, x-2*deltaX, y+side-2*deltaY);
-		Line2D.Double ll_3 = new Line2D.Double(x, y+side/3, x-3*deltaX, y+side/3-3*deltaY);
-		Line2D.Double ll_4 = new Line2D.Double(x, y+2*side/3, x-3*deltaX, y+2*side/3-3*deltaY);
+		lines.add(new Line2D.Double(x-deltaX, y-deltaY, x-deltaX, y+side-deltaY));
+		lines.add(new Line2D.Double(x-2*deltaX, y-2*deltaY, x-2*deltaX, y+side-2*deltaY));
+		lines.add(new Line2D.Double(x, y+side/3, x-3*deltaX, y+side/3-3*deltaY));
+		lines.add(new Line2D.Double(x, y+2*side/3, x-3*deltaX, y+2*side/3-3*deltaY));
 		
 		// Draw the 4 lines on the lower right face
-		Line2D.Double lr_1 = new Line2D.Double(x+deltaX, y-deltaY, x+deltaX, y+side-deltaY);
-		Line2D.Double lr_2 = new Line2D.Double(x+2*deltaX, y-2*deltaY, x+2*deltaX, y+side-2*deltaY);
-		Line2D.Double lr_3 = new Line2D.Double(x, y+side/3, x+3*deltaX, y+side/3-3*deltaY);
-		Line2D.Double lr_4 = new Line2D.Double(x, y+2*side/3, x+3*deltaX, y+2*side/3-3*deltaY);
+		lines.add(new Line2D.Double(x+deltaX, y-deltaY, x+deltaX, y+side-deltaY));
+		lines.add(new Line2D.Double(x+2*deltaX, y-2*deltaY, x+2*deltaX, y+side-2*deltaY));
+		lines.add(new Line2D.Double(x, y+side/3, x+3*deltaX, y+side/3-3*deltaY));
+		lines.add(new Line2D.Double(x, y+2*side/3, x+3*deltaX, y+2*side/3-3*deltaY));
 		
 		// Draw the 4 lines on the topmost face 
-		Line2D.Double up_1 = new Line2D.Double(x-2*deltaX, y-2*deltaY, x-2*deltaX+3*deltaX, y-2*deltaY-3*deltaY);
-		Line2D.Double up_2 = new Line2D.Double(x-deltaX, y-deltaY, x-deltaX+3*deltaX, y-deltaY-3*deltaY);
-		Line2D.Double up_3 = new Line2D.Double(x+2*deltaX, y-2*deltaY, x+2*deltaX-3*deltaX, y-2*deltaY-3*deltaY);
-		Line2D.Double up_4 = new Line2D.Double(x+deltaX, y-deltaY, x+deltaX-3*deltaX, y-deltaY-3*deltaY);
+		lines.add(new Line2D.Double(x-2*deltaX, y-2*deltaY, x-2*deltaX+3*deltaX, y-2*deltaY-3*deltaY));
+		lines.add(new Line2D.Double(x-deltaX, y-deltaY, x-deltaX+3*deltaX, y-deltaY-3*deltaY));
+		lines.add(new Line2D.Double(x+2*deltaX, y-2*deltaY, x+2*deltaX-3*deltaX, y-2*deltaY-3*deltaY));
+		lines.add(new Line2D.Double(x+deltaX, y-deltaY, x+deltaX-3*deltaX, y-deltaY-3*deltaY));
 		
 		// Draw a Rubik's Cube "logo" in the middle square of the topmost face
 		double logoCenterX = x;
@@ -62,18 +72,9 @@ public class RubiksCube extends Cube implements Shape
 	
 		// Add the lines to the Rubik's Cube
 		GeneralPath wholeRubiksCube = this.get();
-		wholeRubiksCube.append(ll_1, false);
-		wholeRubiksCube.append(ll_2, false);
-		wholeRubiksCube.append(ll_3, false);
-		wholeRubiksCube.append(ll_4, false);
-		wholeRubiksCube.append(lr_1, false);
-		wholeRubiksCube.append(lr_2, false);
-		wholeRubiksCube.append(lr_3, false);
-		wholeRubiksCube.append(lr_4, false);
-		wholeRubiksCube.append(up_1, false);
-		wholeRubiksCube.append(up_2, false);
-		wholeRubiksCube.append(up_3, false);
-		wholeRubiksCube.append(up_4, false);
+		for(int i=0; i<lines.size(); i++) {
+			wholeRubiksCube.append(lines.get(i), false);
+		}
 		wholeRubiksCube.append(logo1, false);
 		wholeRubiksCube.append(logo2, false);
     }    
