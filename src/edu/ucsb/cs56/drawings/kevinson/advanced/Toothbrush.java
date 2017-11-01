@@ -33,49 +33,13 @@ public class Toothbrush extends GeneralPathWrapper implements Shape
     */
     public Toothbrush(double x, double y, double width, double height)
     {
-	
-        // Rather than having to scale at the end, we can just
-        // draw things the right way to begin with, using the
-        // x, y, width and height.   If you haven't already
-        // hard coded a particular drawing, this may be an easier
-        // way.
-        /*
-        double firstStoryHeight = .75 * height;
-        double roofHeight = height - firstStoryHeight;
-        
-        double firstStoryUpperLeftY = y + roofHeight;
-        
-        // Make the first story
-        
-        Rectangle2D.Double firstStory = 
-            new Rectangle2D.Double(x, firstStoryUpperLeftY ,
-				   width, firstStoryHeight);
-	
-        // make the roof.   Remember that y goes DOWN the page,
-        // so we ADD to y to get a "lower" value on the screen
-        
-        Line2D.Double leftRoof = 
-            new Line2D.Double (x, y + roofHeight,
-                               x + width/2.0, y);
-	
-        Line2D.Double rightRoof =
-            new Line2D.Double (x + width/2.0, y,
-                               x + width, y + roofHeight);
-	
-        // put the whole house together
-	
-        GeneralPath wholeHouse = this.get();
-        wholeHouse.append(firstStory, false);
-        wholeHouse.append(leftRoof, false);
-        wholeHouse.append(rightRoof, false);
-	*/
 	// setting up the bristles base of the toothbrush
 
 	double bristleHeight = 0.25 * height;
 	double bristleWidth = width / 3;
 
 	double bristleLowerLeftX = x + (0.25 * x);
-	double bristleLowerLeftY = y - height;
+	double bristleLowerLeftY = y - (0.25 * height);
 
 	// setting up the height of each bristle
 
@@ -94,28 +58,28 @@ public class Toothbrush extends GeneralPathWrapper implements Shape
 	// make the bristles of the toothbrush on the bristles base
 	
 	Line2D.Double b1 =
-	    new Line2D.Double (bristleLowerLeftX, bristleLowerLeftY - bristleHeight,
+	    new Line2D.Double (bristleLowerLeftX, bristleLowerLeftY,
 			       bristleLowerLeftX, bristleLowerLeftY - bristleHeight - bristleLength);
 
 	Line2D.Double b2 =
-	    new Line2D.Double (bristleLowerLeftX + bristleDist, bristleLowerLeftY - bristleHeight,
+	    new Line2D.Double (bristleLowerLeftX + bristleDist, bristleLowerLeftY,
 			       bristleLowerLeftX + bristleDist, bristleLowerLeftY - bristleHeight - bristleLength);
 
 	Line2D.Double b3 =
-	    new Line2D.Double (bristleLowerLeftX + (2 * bristleDist), bristleLowerLeftY - bristleHeight,
+	    new Line2D.Double (bristleLowerLeftX + (2 * bristleDist), bristleLowerLeftY,
 			       bristleLowerLeftX + (2 * bristleDist), bristleLowerLeftY - bristleHeight - bristleLength);
 
 	Line2D.Double b4 =
-	    new Line2D.Double (bristleLowerLeftX + (3 * bristleDist), bristleLowerLeftY - bristleHeight,
+	    new Line2D.Double (bristleLowerLeftX + (3 * bristleDist), bristleLowerLeftY,
 			       bristleLowerLeftX + (3 * bristleDist), bristleLowerLeftY - bristleHeight - bristleLength);
 
 	Line2D.Double b5 =
-	    new Line2D.Double (bristleLowerLeftX + (4 * bristleDist), bristleLowerLeftY - bristleHeight,
+	    new Line2D.Double (bristleLowerLeftX + (4 * bristleDist), bristleLowerLeftY,
 			       bristleLowerLeftX + (4 * bristleDist), bristleLowerLeftY - bristleHeight - bristleLength);
 
 	Line2D.Double b6 =
-	    new Line2D.Double (bristleLowerLeftX + bristleDist, bristleLowerLeftY - bristleHeight,
-			       bristleLowerLeftX + bristleDist, bristleLowerLeftY - bristleHeight - bristleLength);
+	    new Line2D.Double (bristleLowerLeftX + (5 * bristleDist), bristleLowerLeftY,
+			       bristleLowerLeftX + (5 * bristleDist), bristleLowerLeftY - bristleHeight - bristleLength);
 
 	// put the whole toothbrush together
 
