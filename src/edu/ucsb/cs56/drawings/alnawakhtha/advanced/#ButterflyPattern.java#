@@ -1,0 +1,42 @@
+package edu.ucsb.cs56.drawings.alnawakhtha.advanced;
+import java.awt.geom.GeneralPath;  
+import java.awt.Shape; 
+import java.awt.geom.Rectangle2D;
+import java.awt.geom.Ellipse2D;
+
+
+public class ButterflyWithPattern extends Butterfly implements Shape
+{
+    public ButterflyWithPattern(double x, double y, double width, double height)
+    {
+	// construct the butterfly
+	super(x,y,width,height);
+	
+	GeneralPath gp = this.get();
+	
+        double radiusOfBody = .0288 * height; 
+	double radiusOfHead = 0.5*(height-radiusOfBody*26);
+	double radiusOfBigWing =  0.25*(width-radiusOfBody);
+	double radiusOfSmallWing = 0.5*radiusOfBigWing;
+	double radiusOfEyes = 0.25*radiusOfBody;
+	double radiusOfBigPattern = radiusOfBody;
+	double radiuesOfSmallPatter = radiusOfBody;
+	
+	double[] posBigLeftWing = {x-radiusOfBody- 2 * radiusOfBigWing, y- 6*radiusOfBody - radiusOfBigWing};
+	
+        double[] posBigRightWing = {x+radiusOfBody, y- 6*radiusOfBody - radiusOfBigWing};
+
+	double[] posSmallLeftWing = {x-radiusOfBody- 2 * radiusOfSmallWing, y- 6*radiusOfBody + radiusOfBigWing};
+
+	double[] posSmallRightWing = {x+radiusOfBody, y- 6*radiusOfBody + radiusOfBigWing};
+	
+	Ellipse2D.Double bigLeftWingP1 = new Ellipse2D.Double(posBigLeftWing[0]+radiusOfBigWing-radiusOfBigPattern, posBigLeftWing[1] + 0.5*radiusOfBigWing - radiusOfBigPattern, radiusOfBigPatter *2, radiusOfBigPattern*2);
+	
+	// add the windows to the house
+	// Look up the meaning of the second parameter of append
+	// (Hint--is a method of "GeneralPath")
+	
+        GeneralPath wholeButterfly = this.get();
+        wholeButterfly.append(bigLeftWingP1, false); 
+    }    
+}
