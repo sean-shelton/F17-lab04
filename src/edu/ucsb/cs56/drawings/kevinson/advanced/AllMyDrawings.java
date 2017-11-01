@@ -23,21 +23,23 @@ public class AllMyDrawings
     
     public static void drawPicture1(Graphics2D g2) {
 
-	Toothbrush t1 = new Toothbrush(100, 250, 500, 100);
+	Toothbrush t1 = new Toothbrush(100, 350, 500, 100);
 	g2.setColor(Color.CYAN); g2.draw(t1);
 
 	// make a black toothbrush that's half the size,
-	// and moved over 150 pixels in x direction
+	// and moved over -160 pixels in x direction and -225 pixels in y direction
+	// rotates it 90 degrees
 
 	Shape t2 = ShapeTransforms.scaledCopyOfLL(t1, 0.5, 0.5);
-	t2 = ShapeTransforms.translatedCopyOf(t2, 150, 0);
-	g2.setColor(Color.BLACK); g2.draw(t2);
+	t2 = ShapeTransforms.translatedCopyOf(t2, -160, -225);
+	Shape t4 = ShapeTransforms.rotatedCopyOf(t2, Math.PI/2.0);
+	g2.setColor(Color.BLACK); g2.draw(t4);
 
-	// here's a toothbrush that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
+	// here's a toothbrush that's the same size as the original but flipped and blue
+	// and moved over 25 pixels to right and 125 pixels up.
 
-	t2 = ShapeTransforms.scaledCopyOfLL(t2, 4, 4);
-	t2 = ShapeTransforms.translatedCopyOf(t2, 150, 0);
+	Shape t3 = ShapeTransforms.rotatedCopyOf(t1, Math.PI);
+	t3 = ShapeTransforms.translatedCopyOf(t3, 25, -125);
 	
 	// we'll draw this with a thicker stroke
 	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
@@ -45,7 +47,7 @@ public class AllMyDrawings
 	Stroke orig = g2.getStroke();
 	g2.setStroke(thick);
 	g2.setColor(new Color(0x002FA7));
-	g2.draw(t2);
+	g2.draw(t3);
 
 	g2.setStroke(orig);
 	g2.setColor(Color.BLACK);
@@ -58,8 +60,8 @@ public class AllMyDrawings
      */
     public static void drawPicture2(Graphics2D g2) {
 
-	ToothbrushWithToothpaste tp1 = new ToothbrushWithToothpaste(50, 350, 300, 75);
-	ToothbrushWithToothpaste tp2 = new ToothbrushWithToothpaste(200, 350, 200, 100);
+	ToothbrushWithToothpaste tp1 = new ToothbrushWithToothpaste(250, 100, 300, 25);
+	ToothbrushWithToothpaste tp2 = new ToothbrushWithToothpaste(75, 300, 200, 100);
 
 	g2.draw(tp1);
 	g2.setColor(new Color(0x8F00FF));
@@ -90,13 +92,13 @@ public class AllMyDrawings
 	
 	// Draw some toothbrushes
 	
-	Toothbrush large = new Toothbrush(100,50,225,50);
-	Toothbrush smallT = new Toothbrush(20,50,90,10);
+	Toothbrush large = new Toothbrush(350,100,200,50);
+	Toothbrush smallT = new Toothbrush(20,100,90,10);
 	
 	g2.setColor(Color.RED);     g2.draw(large);
 	g2.setColor(Color.GREEN);   g2.draw(smallT);
 
-	ToothbrushWithToothpaste largeTT = new ToothbrushWithToothpaste(40,70,800,400);
+	ToothbrushWithToothpaste largeTT = new ToothbrushWithToothpaste(40,300,500,100);
 	ToothbrushWithToothpaste smallTT = new ToothbrushWithToothpaste(250,250,120,30);
 
 	g2.setColor(Color.YELLOW);  g2.draw(largeTT);
