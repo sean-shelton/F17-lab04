@@ -23,7 +23,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 public class Butterfly extends GeneralPathWrapper implements Shape
 {
     /**
-       Constructor
+       Constructor (recommended width to height ratio is 5/4)
        
        @param x x coordinate of center of butterfly
        @param y y coordinate of center of butterfly
@@ -34,7 +34,7 @@ public class Butterfly extends GeneralPathWrapper implements Shape
     {
    
         
-        double radiusOfBody = .0288 * height; //0.075
+        double radiusOfBody = .0288 * height;
 	double radiusOfHead = 0.5*(height-radiusOfBody*26);
 	double radiusOfBigWing =  0.25*(width-radiusOfBody);
 	double radiusOfSmallWing = 0.5*radiusOfBigWing;

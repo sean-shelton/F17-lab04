@@ -17,7 +17,7 @@ public class ButterflyWithPattern extends Butterfly implements Shape
 {
 
     /**
-       Constructor
+       Constructor (recommended width to height ratio is 5/4)
        
        @param x x coordinate of center of butterfly
        @param y y coordinate of center of butterfly
