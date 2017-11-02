@@ -49,7 +49,9 @@ public class AllMyDrawings
 	g2.setStroke(thick);
 	g2.setColor(new Color(0x8F00FF)); g2.draw(bp2);
 	g2.draw(b2); 
-	
+
+	Shape bp3 = ShapeTransforms.translatedCopyOf(bp2,220,0);
+	g2.setColor(Color.RED); g2.draw(bp3);
 	
 	g2.setStroke(orig);
 	g2.setColor(Color.BLACK); 
@@ -59,49 +61,66 @@ public class AllMyDrawings
     
     /** Draw a picture with a few butterflies (some with patterns and some without) and rotate with varius degrees
      */
+
     public static void drawPicture2(Graphics2D g2) {
 	
-	Butterfly small = new Butterfly(200,50,40,30);
-       
-	g2.setColor(Color.GREEN);   g2.draw(small);
-	
-	Butterfly b1 = new Butterfly(100,200,75,60);
+	Butterfly b1 = new Butterfly(40,40,75,60);
 	g2.setColor(Color.RED); g2.draw(b1);
-	
-      
-	Shape b2 = ShapeTransforms.scaledCopyOfLL(b1,0.5,0.5);
-	b2 = ShapeTransforms.translatedCopyOf(b2,150,0);
+
+	ButterflyWithPattern bp1 = new ButterflyWithPattern(40,410,75,60);
+	g2.setColor(Color.BLUE); g2.draw(bp1);
+       
+	Shape b2 = ShapeTransforms.translatedCopyOf(b1,75,60);
 	b2 = ShapeTransforms.rotatedCopyOf(b2, Math.PI/4.0);
 	g2.setColor(Color.BLACK); g2.draw(b2);
-	
-     
-	b2 = ShapeTransforms.scaledCopyOfLL(b2,4,4);
-	b2 = ShapeTransforms.translatedCopyOf(b2,150,0);
-	b2 = ShapeTransforms.rotatedCopyOf(b2,- Math.PI/2.0);
-	
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);    
-	
-	Stroke orig=g2.getStroke();
-	g2.setStroke(thick);
-	g2.setColor(new Color(0x002FA7)); 
-	g2.draw(b2); 
-	
-	ButterflyWithPattern bp1 = new ButterflyWithPattern(50,350,75,60);
-	ButterflyWithPattern bp2 = new ButterflyWithPattern(200,350,75,60);
 
-	g2.setStroke(orig);
-	g2.draw(bp1);
-	g2.setColor(new Color(0x8F00FF)); 
+	Shape bp2 = ShapeTransforms.translatedCopyOf(bp1,75,-60);
+	bp2 = ShapeTransforms.rotatedCopyOf(bp2,-  Math.PI/4.0);
+	g2.setColor(Color.GREEN); g2.draw(bp2);
+
+	b2 = ShapeTransforms.translatedCopyOf(b2,75,60);
+	b2 = ShapeTransforms.rotatedCopyOf(b2, Math.PI/4.0);
+	g2.setColor(Color.RED); g2.draw(b2);
+
+	bp2 =ShapeTransforms.translatedCopyOf(bp2,75,-60);
+	bp2 = ShapeTransforms.rotatedCopyOf(bp2,-  Math.PI/4.0);
+	g2.setColor(Color.BLUE); g2.draw(bp2);
+
+	b2 = ShapeTransforms.translatedCopyOf(b2,75,60);
+	b2 = ShapeTransforms.rotatedCopyOf(b2, Math.PI/4.0);
+
+	bp2 =ShapeTransforms.translatedCopyOf(bp2,75,-60);
+	bp2 = ShapeTransforms.rotatedCopyOf(bp2,-  Math.PI/4.0);
+	g2.setColor(Color.BLACK); g2.draw(bp2);
+
+	b2 = ShapeTransforms.translatedCopyOf(b2,75,60);
+	b2 = ShapeTransforms.rotatedCopyOf(b2, Math.PI/4.0);
+	g2.setColor(Color.GREEN); g2.draw(b2);
+
+	bp2 =ShapeTransforms.translatedCopyOf(bp2,75,-60);
+	bp2 = ShapeTransforms.rotatedCopyOf(bp2,-  Math.PI/4.0);
+	g2.setColor(Color.RED); g2.draw(bp2);
+
+	b2 = ShapeTransforms.translatedCopyOf(b2,75,60);
+	b2 = ShapeTransforms.rotatedCopyOf(b2, Math.PI/4.0);
+	g2.setColor(Color.BLUE); g2.draw(b2);
+
+	bp2 =ShapeTransforms.translatedCopyOf(bp2,75,-60);
+	bp2 = ShapeTransforms.rotatedCopyOf(bp2,-  Math.PI/4.0);
+	g2.setColor(Color.BLACK); g2.draw(bp2);
+
+	b2 = ShapeTransforms.translatedCopyOf(b2,75,60);
+	b2 = ShapeTransforms.rotatedCopyOf(b2, Math.PI/4.0);
+	g2.setColor(Color.GREEN); g2.draw(b2);
+
+	bp2 =ShapeTransforms.translatedCopyOf(bp2,75,-60);
+	bp2 = ShapeTransforms.rotatedCopyOf(bp2,-  Math.PI/4.0);
+	g2.setColor(Color.RED); g2.draw(bp2);
+
+	g2.setColor(Color.BLACK);
+	g2.drawString("Rotating Butterflies", 100,20);
 	
-	
-	Shape bp3 = ShapeTransforms.rotatedCopyOf(bp2, Math.PI/2.0);
-	
-	g2.draw(bp3);
-	
-	
-	
-	g2.setColor(Color.BLACK); 
-	g2.drawString("Rotating Butterflies", 20,20);
+
     }
     
     /** Draw a picture of butterflies with patterns and scale their size by an integer multiple of the original butterfly
@@ -115,12 +134,12 @@ public class AllMyDrawings
 	
       
 	
-	ButterflyWithPattern b1 = new ButterflyWithPattern(20,50,40,32);
+	ButterflyWithPattern b1 = new ButterflyWithPattern(50,50,40,32);
 	g2.setColor(Color.GREEN);   g2.draw(b1);
 
 	Shape b2 = ShapeTransforms.scaledCopyOfLL(b1,2,2);
 	b2 = ShapeTransforms.translatedCopyOf(b2,100,100);
-	g2.setColor(Color.CYAN); g2.draw(b2);
+	g2.setColor(Color.BLUE); g2.draw(b2);
 
 	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
 	g2.setStroke(thick);
