@@ -26,10 +26,6 @@ public class Toothbrush extends GeneralPathWrapper implements Shape
        @param y y coord of lower left corner of the base
        @param width width of the base
        @param height of the base
-       @param //bx bx coord of lower left corner of the bristles holder
-       @param //by by coord of lower left corner of the bristles holder
-       @param //b_width width of the bristles holder
-       @param //b_height height of the bristles holder
     */
     public Toothbrush(double x, double y, double width, double height)
     {
